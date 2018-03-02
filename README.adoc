@@ -1,0 +1,22 @@
+Welcome to ScholarShift
+
+ScholarShift
+:toc:
+:toclevels: 1
+
+== Background
+ScholarShift is a project that was started to help students ages 11-14 learn
+how to develop some basic applications on OpenShift Online.
+
+== Instructor Requirements
+
+=== OpenShift Online
+
+
+=== Editors
+
+
+=== Github
+
+
+== Student Guide
