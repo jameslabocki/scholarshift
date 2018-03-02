@@ -1,5 +1,7 @@
-![ScholarShift Logo](image::https://github.com/jameslabocki/scholarshift/raw/master/images/guide/scholarshift.png)
 
+:imagesdir: images/guide
+
+image::scholarshift.png
 
 Welcome to ScholarShift
 
