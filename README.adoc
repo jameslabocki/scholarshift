@@ -1,5 +1,5 @@
 
-image:/images/guide/scholarshift.png
+image:images/guide/scholarshift.png
 
 Welcome to ScholarShift
 
@@ -38,4 +38,4 @@ as collaborators to an *OpenShift Online* project.
 .Welcome
 Welcome the ScholarShift! In this class you'll learn the basics of how to write applications that run *ON THE CLOUD*!
 
-image:/images/guide/mrcloud.png
+image:images/guide/mrcloud.png
