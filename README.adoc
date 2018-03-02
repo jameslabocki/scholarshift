@@ -6,17 +6,37 @@ ScholarShift
 
 == Background
 ScholarShift is a project that was started to help students ages 11-14 learn
-how to develop some basic applications on OpenShift Online.
+how to basic application development works with OpenShift Online. The class covers
+topics such as:
+
+* An introduction to Cloud Native Application Development (OpenShift)
+* The importance and basics of source control (GitHub)
+* How to write a Hello World Program (Apache on OpenShift)
 
 == Instructor Requirements
 
-=== OpenShift Online
+Here are some of the prerequisites in order to make the class successful.
+
+.OpenShift Online Pro
+As an instructor, you will need to purchase a subscription *OpenShift Online*. The cost (as of this writing) is $50 per month.
+
+.Email Addresses for Students
+Students who will participate in the class need a working email address. It is recommended
+you gather the email addresses of the student prior to class. These email addresses will be used
+to create accounts at *GitHub* and you will use the email addresses to add the students
+as collaborators to an *OpenShift Online* project.
+
+=== Configuring OpenShift Online
 
 
 === Editors
 
 
-=== Github
+=== Github configuration
 
 
 == Student Guide
+.Welcome
+Welcome the ScholarShift! In this class you'll learn the basics of how to write applications that run *ON THE CLOUD*!
+
+image:/images/guide/mrcloud.png
