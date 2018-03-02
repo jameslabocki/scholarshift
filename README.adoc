@@ -1,3 +1,6 @@
+
+image:/images/guide/scholarshift.png
+
 Welcome to ScholarShift
 
 == Background
