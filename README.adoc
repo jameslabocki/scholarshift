@@ -1,5 +1,5 @@
 
-image::images/guide/scholarshift.png
+image::https://github.com/jameslabocki/scholarshift/raw/master/images/guide/scholarshift.png
 
 Welcome to ScholarShift
 
