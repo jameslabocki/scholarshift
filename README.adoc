@@ -1,7 +1,8 @@
 
-:imagesdir: images/guide
+:imagesdir: https://github.com/jameslabocki/scholarshift/tree/master/images/guide
 
-image::scholarshift.png
+
+image::scholarshift.png[]
 
 Welcome to ScholarShift
 
