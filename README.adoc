@@ -28,6 +28,10 @@ to create accounts at *GitHub* and you will use the email addresses to add the s
 as collaborators to an *OpenShift Online* project.
 
 === Configuring OpenShift Online
+You will need to log into OpenShift Online and add
+
+Browse to link:https://manage.openshift.com/[OpenShift Online's Management Page]
+
 
 
 === Editors
