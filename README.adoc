@@ -45,4 +45,4 @@ Browse to link:https://manage.openshift.com/[OpenShift Online's Management Page]
 .Welcome
 Welcome the ScholarShift! In this class you'll learn the basics of how to write applications that run *ON THE CLOUD*!
 
-image:images/guide/mrcloud.png
+image:mrcloud.png[]
