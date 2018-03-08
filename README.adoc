@@ -42,7 +42,13 @@ Browse to link:https://manage.openshift.com/[OpenShift Online's Management Page]
 
 
 == Student Guide
+
 .Welcome
 Welcome the ScholarShift! In this class you'll learn the basics of how to write applications that run *ON THE CLOUD*!
 
 image:mrcloud.png[]
+
+Hopefully, your instructor has already taken you through the basics of software applicaitons, *OpenShift Online*, and *GitHub*
+so you have some idea about how software development works. Don't worry, you don't need to be an expert - that's the whole point 
+
+The first thing
