@@ -1,5 +1,5 @@
 ifdef::env-github[]
-:imagesdir: https://github.com/jameslabocki/scholarshift/tree/master/images/guide
+:imagesdir:https://github.com/jameslabocki/scholarshift/tree/master/images/guide
 endif::[]
 
 image::scholarshift.jpg[]
