@@ -58,7 +58,8 @@ about how software development works. Don't worry, you don't need to be an exper
 
 === Deploying Your First Application
 
-Let's get started by writing and launching our first application on the cloud, a simple website.
+Let's get started by writing and launching our first application on the cloud, a simple website. The website will run on the apache webserver.
+Apache is a very popular web server that millions of websites run on.
 
 The first thing you'll need to do to get started is create a project in *GitHub*. *GitHub* is a website that hosts source control repositories.
 You can think of source control management or link:https://en.wikipedia.org/wiki/Version_control[version control] kind of like a library -
@@ -94,27 +95,54 @@ git version 2.14.2
 ....
 If this works, then you are probably good to start using your git client.
 
-. Now, create a new directory.
+. Now, create a new directory using the *mkdir* command.
 ....
 # mkdir website
 ....
 
-. Now, change directories to be inside the directory you created.
+. Now, change directories to be inside the directory you created using the *cd* command.
 ....
 # cd website
 ....
 
-. From here, we can begin creating
+. From here, we can begin writing the code for your first application.
 ....
-echo "# website" >> README.md
+# echo "This is my site" >> index.html
+....
+By using the *echo* command and redirecting *>>* the output to a file, the file *index.html* will now contain the text "This is my site"
+
+. Now that we have a file on our local machine, we need to upload it to GitHub. You can think of that like taking the book you've been writing, making a copy, and sending it to the library. The first step is to initialize the directory you are working in to be a git repository.
+....
+# git init
 ....
 
-git init
+. Next we need to tell git that we want to add the index.html file to our local project (on your computer).
+....
+# git add index.html
+....
 
-git add README.md
+. With git (our source control), when you want a change to be logged it's called "committing". You can use the command *git commit* to commit your code.
+....
+# git commit -m "first commit"
+....
 
-git commit -m "first commit"
+. Next you need to tell git on your local computer where it should send the changes you've been making. We will add the project you created on GitHub as that location using the *git remote add* command. Be sure to change the text "<CHANGEME>" in the example below to your student number.
+....
+# git remote add origin https://github.com/student<CHANGEME>NBCA/website.git
+....
 
-git remote add origin https://github.com/student1NBCA/website.git
+. Finally, you will push the changes you've made to your local git repository to the remote git repository hosted by GitHub using the *git push* command.
+....
+# git push -u origin master
+....
 
-git push -u origin master
+==== Running an Application from your Code
+All that code writing and source control is fun, but what's the point if you don't run your application. Going back to our book and library analogy - you
+have created a book (repository), brought it home with you and written some pages (code), and returned it to the library. Now, you want to publish it
+so that everyone can enjoy it. Well, in order to do that, you'll need a publishing company to take your copy and run it. You can think of OpenShift
+as the publishing company, bookstore, and every library in the world all wrapped into one. So, let's get started getting your "book" out to the world.
+
+First, you'll need to log into the OpenShift Online console.
+
+
+=== Getting More Complicated: Deploying a Game
