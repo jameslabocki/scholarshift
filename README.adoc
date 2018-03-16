@@ -41,6 +41,10 @@ Each student will need to create a GitHub account. If you created your students 
 it is possible for you to create GitHub accounts for them prior to the class. This is what I did, so I am not documenting
 how to do it for the students at this point.
 
+=== Git Client
+Each student will need to have access to a git client.
+I recommend just installing the link:https://git-scm.com/downloads[Command Line Client] for your operating system.
+
 
 == Student Guide
 
@@ -51,9 +55,9 @@ Welcome the ScholarShift! In this class you'll learn the basics of how to write 
 
 image:mrcloud.png[]
 
-Hopefully, your instructor has already taken you through the basics of software applications, *OpenShift Online*, and *GitHub*
-so you have some idea about how software development works. Don't worry, you don't need to be an expert - that's the whole point of this class -
-for you to learn by doing!
+Hopefully, your instructor has helped you complete all the prerequisites of having a git client installed, having access to github and openshift.
+Also, your instructor should have taken you through the basics of software applications, *OpenShift Online*, and *GitHub* so you have some idea
+about how software development works. Don't worry, you don't need to be an expert - that's the whole point of this class -for you to learn by doing!
 
 
 === Deploying Your First Application
@@ -65,8 +69,56 @@ You can think of source control management or link:https://en.wikipedia.org/wiki
 where everyone can write in books to build stories together. To write your book, you'll need to create a repository in GitHub
 (think of that like your book).
 
-==== Creating a GitHub Repository
-image:git01.png[]
+==== Creating a Project (Repository) on GitHub
 . Browse to link:http://www.github.com[GitHub] and click the *sign in* button.
-image:git02.png[]
+image:git01.png[]
 . Log in using your email address and password.
+image:git02.png[]
+. Select *Create a Project*
+image:git03.png[]
+. You'll notice GitHub is asking you to create a new repository and it requires some information
+.  Repository Name: website
+.  Description: my first website
+.  Make sure *Public* is selected
+.  You do not need to initialize the repository with a README at this time
+.  Select *Create* to create your first project (repository)
+image:git04.png[]
+. Congratulations! You've created your first repository! You'll see that GitHub gives you several options on what to do next. We'll cover this in the next section.
+image:git5.png[]
+
+==== Populating Your Repository
+Earlier, we compared GitHub to a library and a repository to a book. So far, all you've done is write the title of your book (you named it website).
+While this is really nice, a book without any pages or a story is a bit boring. Now we will look at adding some pages to your book. To do this, we'll
+use the git client. You will need to open a terminal window on your computer and make sure you can run the git client.
+
+. To check if git is functioning you can run it with a command line option of *version* to see if it prints out the version.
+...
+# git --version
+git version 2.14.2
+...
+If this works, then you are probably good to start using your git client.
+
+. Now, create a new directory.
+...
+# mkdir website
+...
+
+. Now, change directories to be inside the directory you created.
+...
+# cd website
+...
+
+. From here, we can begin creating
+...
+echo "# website" >> README.md
+...
+
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/student1NBCA/website.git
+
+git push -u origin master
