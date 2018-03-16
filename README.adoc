@@ -47,10 +47,6 @@ I recommend just installing the link:https://git-scm.com/downloads[Command Line 
 
 
 == Student Guide
-
-This is the portion of the guide that students can follow.
-
-.Welcome
 Welcome the ScholarShift! In this class you'll learn the basics of how to write applications that run *ON THE CLOUD*!
 
 image:mrcloud.png[]
