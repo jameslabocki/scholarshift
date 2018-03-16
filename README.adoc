@@ -65,8 +65,8 @@ You can think of source control management or link:https://en.wikipedia.org/wiki
 where everyone can write in books to build stories together. To write your book, you'll need to create a repository in GitHub
 (think of that like your book).
 
-.Creating a GitHub Repository
-  image:git01.png[]
+==== Creating a GitHub Repository
+image:git01.png[]
 . Browse to link:http://www.github.com[GitHub] and click the *sign in* button.
-  image:git02.png[]
+image:git02.png[]
 . Log in using your email address and password.
