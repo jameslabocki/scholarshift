@@ -4,9 +4,7 @@ endif::[]
 
 image::scholarshift.jpg[]
 
-Welcome to ScholarShift
 
-== Background
 ScholarShift is a project that was started to help students ages 11-14 learn
 how to basic application development works with OpenShift Online. The class covers
 topics such as:
@@ -49,6 +47,10 @@ Welcome the ScholarShift! In this class you'll learn the basics of how to write 
 image:mrcloud.png[]
 
 Hopefully, your instructor has already taken you through the basics of software applicaitons, *OpenShift Online*, and *GitHub*
-so you have some idea about how software development works. Don't worry, you don't need to be an expert - that's the whole point 
+so you have some idea about how software development works. Don't worry, you don't need to be an expert - that's the whole point.
 
-The first thing
+Let's get started by writing and launching our first application on the cloud, a simple website.
+
+The first thing you'll need to do to get started is create a project in *GitHub*. *GitHub* is a website that hosts source control repositories.
+You can think of source control kind of like a library - where everyone can write in books to build stories together. To write your book, you'll need
+to create a repository in GitHub (think of that like your book).
