@@ -24,33 +24,49 @@ As an instructor, you will need to purchase a subscription *OpenShift Online*. T
 Students who will participate in the class need a working email address. It is recommended
 you gather the email addresses of the student prior to class. These email addresses will be used
 to create accounts at *GitHub* and you will use the email addresses to add the students
-as collaborators to an *OpenShift Online* project.
+as collaborators to an *OpenShift Online* project. Alternatively, you can create student email address accounts and assign
+them to students.
 
 === Configuring OpenShift Online
-You will need to log into OpenShift Online and add
+You will need to log into OpenShift Online and add the students.
 
-Browse to link:https://manage.openshift.com/[OpenShift Online's Management Page]
-
-
+Browse to link:https://manage.openshift.com/[OpenShift Online's Management Page].
 
 === Editors
+It is recommended that you have each student in the class install the link:https://atom.io/[Atom] text editor.
 
 
-=== Github configuration
+=== GitHub Configuration
+Each student will need to create a GitHub account. If you created your students email addresses for them
+it is possible for you to create GitHub accounts for them prior to the class. This is what I did, so I am not documenting
+how to do it for the students at this point.
 
 
 == Student Guide
+
+This is the portion of the guide that students can follow.
 
 .Welcome
 Welcome the ScholarShift! In this class you'll learn the basics of how to write applications that run *ON THE CLOUD*!
 
 image:mrcloud.png[]
 
-Hopefully, your instructor has already taken you through the basics of software applicaitons, *OpenShift Online*, and *GitHub*
-so you have some idea about how software development works. Don't worry, you don't need to be an expert - that's the whole point.
+Hopefully, your instructor has already taken you through the basics of software applications, *OpenShift Online*, and *GitHub*
+so you have some idea about how software development works. Don't worry, you don't need to be an expert - that's the whole point of this class -
+for you to learn by doing!
+
+
+=== Deploying Your First Application
 
 Let's get started by writing and launching our first application on the cloud, a simple website.
 
 The first thing you'll need to do to get started is create a project in *GitHub*. *GitHub* is a website that hosts source control repositories.
-You can think of source control kind of like a library - where everyone can write in books to build stories together. To write your book, you'll need
-to create a repository in GitHub (think of that like your book).
+You can think of source control management or link:https://en.wikipedia.org/wiki/Version_control[version control] kind of like a library -
+where everyone can write in books to build stories together. To write your book, you'll need to create a repository in GitHub
+(think of that like your book).
+
+.Creating a GitHub Repository
+  image:git01.png[]
+. Browse to link:http://www.github.com[GitHub] and click the *sign in* button.
+  image:git02.png[]
+. Log in using your email address and password.
