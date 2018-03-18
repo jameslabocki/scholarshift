@@ -30,7 +30,25 @@ them to students.
 === Configuring OpenShift Online
 You will need to log into OpenShift Online and add the students.
 
-Browse to link:https://manage.openshift.com/[OpenShift Online's Management Page].
+Browse to link:https://manage.openshift.com/[OpenShift Online's Management Page] and log in using your credentials. Then click on *Manage Subscription* and then click on *Manage*
+next to *Collaborators*. Enter the usernames of the students you want to be collaborators until complete.
+
+Next, you'll need to create a project for each student and give them permission to manage things within that project.
+
+....
+# for number in 1 2 3 4 5 6 7 8; do \
+oc new-project student${number}nbca --description="A project, just for student${number}NBCA" --display-name="student${number}NBCA" ; \
+oc policy add-role-to-user admin student${number}nbca ; \
+done
+....
+
+You can also delete all of them by doing this - warning, it will delete the project and everything inside them!!!
+....
+# for number in 1 2 3 4 5 6 7 8; do \
+oc delete project student${number}nbca ; \
+done
+....
+
 
 === Editors
 It is recommended that you have each student in the class install the link:https://atom.io/[Atom] text editor.
@@ -59,7 +77,7 @@ about how software development works. Don't worry, you don't need to be an exper
 === Deploying Your First Application
 
 Let's get started by writing and launching our first application on the cloud, a simple website. The website will run on the apache webserver.
-Apache is a very popular web server that millions of websites run on.
+Apache is a very popular web server that millions of websites run on. link:https://w3techs.com/technologies/details/ws-apache/all/all[W3techs website] estimates that 47% of websites run on apache!
 
 The first thing you'll need to do to get started is create a project in *GitHub*. *GitHub* is a website that hosts source control repositories.
 You can think of source control management or link:https://en.wikipedia.org/wiki/Version_control[version control] kind of like a library -
@@ -142,7 +160,29 @@ have created a book (repository), brought it home with you and written some page
 so that everyone can enjoy it. Well, in order to do that, you'll need a publishing company to take your copy and run it. You can think of OpenShift
 as the publishing company, bookstore, and every library in the world all wrapped into one. So, let's get started getting your "book" out to the world.
 
-First, you'll need to log into the OpenShift Online console.
+image:firstapp01.png[]
+First, you'll need to log into the OpenShift Online console. Browse to the link:https://manage.openshift.com/[OpenShift Management Console]
+
+image:firstapp02.png[]
+Then enter your username and password that the instructor provided to you.
+
+image:firstapp03.png[]
+You should have landed at the *Active Subscriptions* screen. From here, click *Open Web Console*.
+
+image:firstapp04.png[]
+You should now see the OpenShift Service Catalog. This catalog can be used to launch various applications on OpenShift. For our first application, you'll select *Apache HTTP Server (httpd)*.
+
+image:firstapp05.png[]
+The information page for launching Apache is displayed. You can read the information about it and then click next.
+
+image:firstapp06.png[]
+The next screen is the configuration page. Set the following values substituting your student number for <CHANGEME>:
+. Project Name = website-project<CHANGEME>
+. Project Display Name = my website
+. Project Description = learning to launch my first application
+. Version = 2.4
+. Application Name = website-application
+. Git Repository = https://github.com/student<CHANGEME>NBCA/website.git
 
 
 === Getting More Complicated: Deploying a Game
