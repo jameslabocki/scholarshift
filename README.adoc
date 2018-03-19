@@ -123,11 +123,13 @@ If this works, then you are probably good to start using your git client.
 # cd website
 ....
 
-. From here, we can begin writing the code for your first application.
+. From here, we can begin writing the code for your first application. We will keep it *really* simple at first and just have your website say something really simple.
+
 ....
-# echo "This is my site" >> index.html
+# echo "This is <YOURNAME>'s website'" >> index.html
 ....
-By using the *echo* command and redirecting *>>* the output to a file, the file *index.html* will now contain the text "This is my site"
+By using the *echo* command and redirecting *>>* the output to a file, the file *index.html* will now contain the text "This is <YOURNAME>'s webiste"
+Of course, you should substitute *your name* where it says <YOURNAME>.
 
 . Now that we have a file on our local machine, we need to upload it to GitHub. You can think of that like taking the book you've been writing, making a copy, and sending it to the library. The first step is to initialize the directory you are working in to be a git repository.
 ....
@@ -184,5 +186,62 @@ The next screen is the configuration page. Set the following values substituting
 . Application Name = website-application
 . Git Repository = https://github.com/student<CHANGEME>NBCA/website.git
 
+Now you can click *next* and OpenShift will begin deploying your first application, a website running on Apache!
+
+image:boom.png[]
+
+==== Customizing Your Website
+
+image:creative.png[]
+
+So, you built your first website. Great, but it's a little boring isn't it? I mean, just some simple text telling people that it's your website
+isn't so exciting. Let's take some time to customize it a bit. Webpages are often written in Hyper-Text Markup Language or HTML, for short.
+
+HTML is fairly simple to write. Let's start by editing the index.html file and changing it to be written in HTML.
+
+First, open your favorite text editor. In this class we use link:https://atom.io/[Atom]. It's free and you can install it from their website.
+
+image:customize01.png[]
+In Atom, you'll need to browse to your project folder by clicking *File* and then *Open Folder*.
+
+image:customize02.png[]
+Then browse to the folder that you created called *website* earlier and open it.
+
+image:customize03.png[]
+You should then be able to click on *index.html* on the left hand pane of the Atom text editor and see the text you entered in the
+previous lab you completed. This is exactly what we want to change!
+
+image:customize04.png[]
+One of the nice things with the Atom text editor is that it allows you to preview your HTML markup. This is really handy because as you
+write your HTML you can see what it will look like before going through all the trouble of checking it into GitHub and deploying
+it on OpenShift. When developing software, the faster you can get feedback the more efficient you will be!
+
+To enable preview click on *Packages* then *Markdown Preview* and *Toggle Preview*. This will open a new pane to the right that shows
+a live preview of what you write.
+
+Let's test it out and make a simple change. The HTML for having a horizontal line show up on your page *<HR>* (it stands for Horizontal Rule in case you were curious).
+Type the following into your index.html in the Atom text editor and see if your preview shows you a line.
+
+....
+<HTML>
+This is my new and improved website, now with infinitely more horizontal line!
+<HR>
+</HTML>
+....
+
+image:customize05.png[]
+Now, your preview should look something like this.
+
+
+
+
+
 
 === Getting More Complicated: Deploying a Game
+
+image:pacman.png[]
+
+Ok, so you've customized your website and learned a little HTML. Good for you! I bet you are tired now ... how about we relax a little?
+You know what I always find relaxing is a game of Pac Man. Too bad we don't have our Nintendo GameBoy at school, right?
+
+Well, how about if we deploy PacMan for ourselves?!
