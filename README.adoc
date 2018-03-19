@@ -99,7 +99,7 @@ image:git03.png[]
 .  Select *Create* to create your first project (repository)
 image:git04.png[]
 . Congratulations! You've created your first repository! You'll see that GitHub gives you several options on what to do next. We'll cover this in the next section.
-image:git5.png[]
+image:git05.png[]
 
 ==== Populating Your Repository
 Earlier, we compared GitHub to a library and a repository to a book. So far, all you've done is write the title of your book (you named it website).
