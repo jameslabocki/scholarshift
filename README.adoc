@@ -17,10 +17,10 @@ topics such as:
 
 Here are some of the prerequisites in order to make the class successful.
 
-.OpenShift Online Pro
+=== OpenShift Online Pro
 As an instructor, you will need to purchase a subscription *OpenShift Online*. The cost (as of this writing) is $50 per month.
 
-.Email Addresses for Students
+=== Email Addresses for Students
 Students who will participate in the class need a working email address. It is recommended
 you gather the email addresses of the student prior to class. These email addresses will be used
 to create accounts at *GitHub* and you will use the email addresses to add the students
@@ -297,11 +297,70 @@ Then, follow the instructions for downloading and installing the tools for your 
 
 Great! Now, you have installed the tools and we can get started deploying our Pac Man application.
 
+Now, you'll need to deploy pacman.
 
-So, what is happening?
+image:pacman03.png[]
 
-You'll need to do the following to remove the checks
+Within the OpenShift web console you've been using go to the *catalog* and select the Node.js+MongoDB catalog item.
 
-....
-oc edit dc/nodejs-mongo-persistent
-....
+image:pacman04.png[]
+
+Click *next* on the screen that comes up and then on the *configuration* screen enter the following values in.
+
+* Project Name = "pacman"
+* Git Repository URL = https://github.com/jameslabocki/pacman.git
+* MongoDB Username = "admin"
+* MongoDB Password = "secret"
+* Database Name = "pacman"
+
+The click *create* to and go back to the overview page.
+
+image:pacman05.png[]
+
+You should see that a build is pending and then the build log should start updating.
+What is happening is that OpenShift is taking the source code for Pac Man and building an image
+of that application with the NodeJS runtime. You also see that a MongoDB application was deployed.
+OpenShift will connect these two applications together using the information you provided, the database
+name, username, and password. It will take a minute or two for this to complete.
+
+After some time, you might have noticed that Pac Man still isn't running and your deployment named *nodejs-mongo-persistent*
+continues to re-deploy over and over again. Something must be wrong, let's look!
+
+image:pacman06.png[]
+
+Click on *View Events* and look at what is happening. So, what is happening?
+
+You should see that readiness and liveness checks are failing. These are checks
+that OpenShift does to make sure your application is working properly. Unfortunately, they must be checking too quickly or checking the wrong path
+and Pac Man is taking longer to start or doesn't have that path. When it doesn't respond fast enough or at all, OpenShift is restarting the deployment.
+
+Fortunately we can change the deployment configuration to get rid of the problem.
+
+You'll need to do the following to edit the checks.
+
+image:pacman07.png[]
+
+First, edit the deployment controller by selecting *Applications* and *Deployments* in the OpenShift Console.
+
+image:pacman08.png[]
+
+Then select *configuration*. When you are in the configuraiton screen select *Actions* and then *Edit Health Checks*.
+
+image:pacman09.png[]
+
+Now, let's modify the path, initial delay, and timeout for both the liveness and readiness check. Set them to the following:
+
+. Readiness Probe Path = "/"
+. Readiness Probe Initial Delay = "90"
+. Readiness Probe Timeout = "10"
+. Liveness Probe Path = "/"
+. Liveness Probe Initial Delay = "90"
+. Liveness Probe Timeout = "10"
+
+Then click *save*. You should see a new deployment begin.
+
+image:pacman10.png[]
+
+Now, you should be able to go back to the overview page, and click on the *external route* to see if Pac Man is indeed running!
+
+Congratulations! If you made it this far, enjoy a game of Pac Man!
