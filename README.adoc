@@ -232,6 +232,29 @@ This is my new and improved website, now with infinitely more horizontal line!
 image:customize05.png[]
 Now, your preview should look something like this.
 
+OK, now this is where you get to have fun. For the remainder of the time your instructor has given you for this section of the course
+you can further customize your site. You can use the link:http://htmldog.com/guides/html/beginner/[htmldog] site to learn more about
+HTML and get ideas for what to build.
+
+Remember, once you are done make sure you commit your changes to github, push them, and then start a new build in OpenShift so that your
+live website is updated. The *preview* in the Atom editor is nice, but only you can see it, and you want to share your beautiful work
+of art for the world to see!
+
+Here is how you commit your changes again.
+....
+# git commit -m "I made new changes and want to commit them" .
+....
+
+Here is how you push your changes again.
+....
+# git push
+....
+
+And here is how you trigger a build in OpenShift's console. On the left hand menu select *builds* and *builds*. You will see a screen that
+has a highlight number on it (for example, #1). Click the number and then click on *actions* and *rebuild*.
+
+What this does is it tells OpenShift to rebuild the image using your latest source code. This will also trigger a redeployment of that latest
+image, resulting in your site being updated.
 
 
 
@@ -239,9 +262,46 @@ Now, your preview should look something like this.
 
 === Getting More Complicated: Deploying a Game
 
-image:pacman.png[]
+image:pacman01.jpeg[]
 
 Ok, so you've customized your website and learned a little HTML. Good for you! I bet you are tired now ... how about we relax a little?
 You know what I always find relaxing is a game of Pac Man. Too bad we don't have our Nintendo GameBoy at school, right?
 
+image:pacman02.png[]
+
 Well, how about if we deploy PacMan for ourselves?!
+
+The good news, you won't have to write the PacMan application yourself. That's already been done for you.
+You can find the source code for PacMan link:https://github.com/jameslabocki/pacman.git[here].
+
+This PacMan application is an example of a 2-tier application. The application itself is written in a programming language called
+javascript. Javascript can be run on a client device, such as in an internet browser (Firefox, Chrome, Safari). However, javascript can
+also run on what is called server-side. In this case, our "server-side" will be Openshift. We will run our javascript code on an application
+server called link:https://en.wikipedia.org/wiki/Node.js[Node.js] - it's one of the most popular run-times for server-side javascript.
+
+But where do we store the data for our Pac Man application? After all, if we can't save our high scores the game isn't nearly as fun!
+For storing our data, we will use link:https://en.wikipedia.org/wiki/MongoDB[MongoDB] - a popular Document oriented database.
+
+We will need to deploy a NodeJS application and a MongoDB application at the same time. Let's get started on how we do this with OpenShift.
+
+Before you begin, you'll need to download the OpenShift Command Line tools and install them on your system.
+
+image:cli01.png[]
+
+Go to the link:https://console.pro-us-east-1.openshift.com/console/command-line[Command-line] section of the OpenShift console by clicking
+on the question mark in the top right corner and selecting *Command Line Tools*.
+
+image:cli02.png[]
+
+Then, follow the instructions for downloading and installing the tools for your operating system of choice.
+
+Great! Now, you have installed the tools and we can get started deploying our Pac Man application.
+
+
+So, what is happening?
+
+You'll need to do the following to remove the checks
+
+....
+oc edit dc/nodejs-mongo-persistent
+....
