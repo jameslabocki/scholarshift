@@ -102,7 +102,7 @@ Earlier, we compared GitHub to a library and a repository to a book. So far, all
 # git --version
 git version 2.14.2
 ....
-If this works, then you are probably good to start using your git client.
+If this works, then you are probably good to start using your git client. If not, you will need to fix this before moving on.
 
 . Now, create a new directory using the *mkdir* command.
 ....
@@ -115,14 +115,12 @@ If this works, then you are probably good to start using your git client.
 ....
 
 . From here, we can begin writing the code for your first application. We will keep it *really* simple at first and just have your website say something really simple.
-
 ....
 # echo "This is <YOURNAME>'s website'" >> index.html
 ....
-By using the *echo* command and redirecting *>>* the output to a file, the file *index.html* will now contain the text "This is <YOURNAME>'s webiste"
-Of course, you should substitute *your name* where it says <YOURNAME>.
+By using the *echo* command and redirecting (*>>*)the output to a file, the file *index.html* will now contain the text "This is <YOURNAME>'s webiste" Of course, you should substitute *your name* where it says <YOURNAME>.
 
-. Now that we have a file on our local machine, we need to upload it to GitHub. You can think of that like taking the book you've been writing, making a copy, and sending it to the library. The first step is to initialize the directory you are working in to be a git repository.
+. Now that we have a file on our local machine, we need to upload it to GitHub. You can think of that like taking the book you've been writing, making a copy, and sending it to the library. This way, everyone can see your work and build upon all your hard work. The first step is to initialize the directory you are working in to be a git repository.
 ....
 # git init
 ....
@@ -136,6 +134,7 @@ Of course, you should substitute *your name* where it says <YOURNAME>.
 ....
 # git commit -m "first commit"
 ....
+The *-m* switch can be used with git commit to add a comment to your commit. It's always a good idea to explain what it is you are doing when you commit something  because it helps other people understand what you were doing.
 
 . Next you need to tell git on your local computer where it should send the changes you've been making. We will add the project you created on GitHub as that location using the *git remote add* command. Be sure to change the text "<CHANGEME>" in the example below to your student number.
 ....
@@ -146,9 +145,10 @@ Of course, you should substitute *your name* where it says <YOURNAME>.
 ....
 # git push -u origin master
 ....
+Congratulations, you've just performed your first commit! You can now consider yourself a *DEVELOPER*! :)
 
 ==== Running an Application from your Code
-All that code writing and source control is fun, but what's the point if you don't run your application. Going back to our book and library analogy - you have created a book (repository), brought it home with you and written some pages (code), and returned it to the library. Now, you want to publish it so that everyone can enjoy it. Well, in order to do that, you'll need a publishing company to take your copy and run it. You can think of OpenShift as the publishing company, bookstore, and every library in the world all wrapped into one. So, let's get started getting your "book" out to the world.
+All that code writing and source control is fun, but what's the point if you don't run your application. Going back to our book and library analogy - you have created a book (repository), brought it home with you and written some pages (code), and returned it to the library (committed and pushed). Now, you want to publish it so that lots of people can read it. Well, in order to do that, you'll need a publishing company to take your copy and run it. You can think of OpenShift as the publishing company, bookstore, and every library in the entire world all wrapped into one. So, let's get started getting your "book" out to the world.
 
 image:firstapp01.png[]
 First, you'll need to log into the OpenShift Online console. Browse to the link:https://manage.openshift.com/[OpenShift Management Console]
