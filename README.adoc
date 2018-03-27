@@ -55,39 +55,32 @@ It is recommended that you have each student in the class install the link:https
 
 
 === GitHub Configuration
-Each student will need to create a GitHub account. If you created your students email addresses for them
-it is possible for you to create GitHub accounts for them prior to the class. This is what I did, so I am not documenting
-how to do it for the students at this point.
+Each student will need to create a GitHub account. If you created your students email addresses for them it is possible for you to create GitHub accounts for them prior to the class. This is what I did, so I am not documenting how to do it for the students at this point.
 
 === Git Client
-Each student will need to have access to a git client.
-I recommend just installing the link:https://git-scm.com/downloads[Command Line Client] for your operating system.
+Each student will need to have access to a git client. I recommend just installing the link:https://git-scm.com/downloads[Command Line Client] for your operating system.
 
 
 == Student Guide
-Welcome the ScholarShift! In this class you'll learn the basics of how to write applications that run *ON THE CLOUD*!
+Welcome to ScholarShift! In this class you'll learn the basics of how to write applications that run *ON THE CLOUD*!
 
 image:mrcloud.png[]
 
-Hopefully, your instructor has helped you complete all the prerequisites of having a git client installed, having access to github and openshift.
-Also, your instructor should have taken you through the basics of software applications, *OpenShift Online*, and *GitHub* so you have some idea
-about how software development works. Don't worry, you don't need to be an expert - that's the whole point of this class -for you to learn by doing!
+Hopefully, your instructor has helped you complete all the prerequisites of having a git client installed, having access to github and openshift. Also, your instructor should have taken you through the basics of software applications, *OpenShift Online*, and *GitHub* so you have some idea about how software development works. Don't worry, you don't need to be an expert - that's the whole point of this class -for you to learn by doing!
 
 
 === Deploying Your First Application
 
 Let's get started by writing and launching our first application on the cloud, a simple website. The website will run on the apache webserver.
-Apache is a very popular web server that millions of websites run on. link:https://w3techs.com/technologies/details/ws-apache/all/all[W3techs website] estimates that 47% of websites run on apache!
+Apache is a very popular web server that millions of websites run on. link:https://w3techs.com/technologies/details/ws-apache/all/all[W3techs website] estimates that 47% of websites run on apache! That's a whole lot of pages being served by Apache!
 
-The first thing you'll need to do to get started is create a project in *GitHub*. *GitHub* is a website that hosts source control repositories.
-You can think of source control management or link:https://en.wikipedia.org/wiki/Version_control[version control] kind of like a library -
-where everyone can write in books to build stories together. To write your book, you'll need to create a repository in GitHub
+The first thing you'll need to do to get started is create a project in *GitHub*. *GitHub* is a website that hosts source control repositories. You can think of source control management or link:https://en.wikipedia.org/wiki/Version_control[version control] kind of like a library - where everyone can write in books to build stories together. To write your book, you'll need to create a repository in GitHub
 (think of that like your book).
 
 ==== Creating a Project (Repository) on GitHub
 . Browse to link:http://www.github.com[GitHub] and click the *sign in* button.
 image:git01.png[]
-. Log in using your email address and password.
+. Log in using your email address and password. This should have been given to you by the instructor.
 image:git02.png[]
 . Select *Create a Project*
 image:git03.png[]
@@ -102,9 +95,7 @@ image:git04.png[]
 image:git05.png[]
 
 ==== Populating Your Repository
-Earlier, we compared GitHub to a library and a repository to a book. So far, all you've done is write the title of your book (you named it website).
-While this is really nice, a book without any pages or a story is a bit boring. Now we will look at adding some pages to your book. To do this, we'll
-use the git client. You will need to open a terminal window on your computer and make sure you can run the git client.
+Earlier, we compared GitHub to a library and a repository to a book. So far, all you've done is write the title of your book (you named it website). While this is really nice, a book without any pages or a story is a bit boring. Now we will look at adding some pages to your book. To do this, we'll use the git client. How you install the git client will vary based on your operating system. You should follow the instructions link:https://git-scm.com/downloads[here] if you haven't already installed the client. Once it's installed you will need to open a terminal window on your computer and make sure you can run the git client.
 
 . To check if git is functioning you can run it with a command line option of *version* to see if it prints out the version.
 ....
@@ -157,10 +148,7 @@ Of course, you should substitute *your name* where it says <YOURNAME>.
 ....
 
 ==== Running an Application from your Code
-All that code writing and source control is fun, but what's the point if you don't run your application. Going back to our book and library analogy - you
-have created a book (repository), brought it home with you and written some pages (code), and returned it to the library. Now, you want to publish it
-so that everyone can enjoy it. Well, in order to do that, you'll need a publishing company to take your copy and run it. You can think of OpenShift
-as the publishing company, bookstore, and every library in the world all wrapped into one. So, let's get started getting your "book" out to the world.
+All that code writing and source control is fun, but what's the point if you don't run your application. Going back to our book and library analogy - you have created a book (repository), brought it home with you and written some pages (code), and returned it to the library. Now, you want to publish it so that everyone can enjoy it. Well, in order to do that, you'll need a publishing company to take your copy and run it. You can think of OpenShift as the publishing company, bookstore, and every library in the world all wrapped into one. So, let's get started getting your "book" out to the world.
 
 image:firstapp01.png[]
 First, you'll need to log into the OpenShift Online console. Browse to the link:https://manage.openshift.com/[OpenShift Management Console]
@@ -194,8 +182,7 @@ image:boom.png[]
 
 image:creative.png[]
 
-So, you built your first website. Great, but it's a little boring isn't it? I mean, just some simple text telling people that it's your website
-isn't so exciting. Let's take some time to customize it a bit. Webpages are often written in Hyper-Text Markup Language or HTML, for short.
+So, you built your first website. Great, but it's a little boring isn't it? I mean, just some simple text telling people that it's your website isn't so exciting. Let's take some time to customize it a bit. Webpages are often written in Hyper-Text Markup Language or HTML, for short.
 
 HTML is fairly simple to write. Let's start by editing the index.html file and changing it to be written in HTML.
 
@@ -208,19 +195,14 @@ image:customize02.png[]
 Then browse to the folder that you created called *website* earlier and open it.
 
 image:customize03.png[]
-You should then be able to click on *index.html* on the left hand pane of the Atom text editor and see the text you entered in the
-previous lab you completed. This is exactly what we want to change!
+You should then be able to click on *index.html* on the left hand pane of the Atom text editor and see the text you entered in the previous lab you completed. This is exactly what we want to change!
 
 image:customize04.png[]
-One of the nice things with the Atom text editor is that it allows you to preview your HTML markup. This is really handy because as you
-write your HTML you can see what it will look like before going through all the trouble of checking it into GitHub and deploying
-it on OpenShift. When developing software, the faster you can get feedback the more efficient you will be!
+One of the nice things with the Atom text editor is that it allows you to preview your HTML markup. This is really handy because as you write your HTML you can see what it will look like before going through all the trouble of checking it into GitHub and deploying it on OpenShift. When developing software, the faster you can get feedback the more efficient you will be!
 
-To enable preview click on *Packages* then *Markdown Preview* and *Toggle Preview*. This will open a new pane to the right that shows
-a live preview of what you write.
+To enable preview click on *Packages* then *Markdown Preview* and *Toggle Preview*. This will open a new pane to the right that shows a live preview of what you write.
 
-Let's test it out and make a simple change. The HTML for having a horizontal line show up on your page *<HR>* (it stands for Horizontal Rule in case you were curious).
-Type the following into your index.html in the Atom text editor and see if your preview shows you a line.
+Let's test it out and make a simple change. The HTML for having a horizontal line show up on your page *<HR>* (it stands for Horizontal Rule in case you were curious). Type the following into your index.html in the Atom text editor and see if your preview shows you a line.
 
 ....
 <HTML>
@@ -271,8 +253,7 @@ image:pacman02.png[]
 
 Well, how about if we deploy PacMan for ourselves?!
 
-The good news, you won't have to write the PacMan application yourself. That's already been done for you.
-You can find the source code for PacMan link:https://github.com/jameslabocki/pacman.git[here].
+The good news, you won't have to write the PacMan application yourself. That's already been done for you. You can find the source code for PacMan link:https://github.com/jameslabocki/pacman.git[here].
 
 This PacMan application is an example of a 2-tier application. The application itself is written in a programming language called
 javascript. Javascript can be run on a client device, such as in an internet browser (Firefox, Chrome, Safari). However, javascript can
@@ -307,32 +288,25 @@ image:pacman04.png[]
 
 Click *next* on the screen that comes up and then on the *configuration* screen enter the following values in.
 
-* Project Name = "pacman"
-* Git Repository URL = https://github.com/jameslabocki/pacman.git
-* MongoDB Username = "admin"
-* MongoDB Password = "secret"
-* Database Name = "pacman"
+. Project Name = "pacman"
+. Git Repository URL = https://github.com/jameslabocki/pacman.git
+. MongoDB Username = "admin"
+. MongoDB Password = "secret"
+. Database Name = "pacman"
 
 The click *create* to and go back to the overview page.
 
 image:pacman05.png[]
 
-You should see that a build is pending and then the build log should start updating.
-What is happening is that OpenShift is taking the source code for Pac Man and building an image
-of that application with the NodeJS runtime. You also see that a MongoDB application was deployed.
-OpenShift will connect these two applications together using the information you provided, the database
-name, username, and password. It will take a minute or two for this to complete.
+You should see that a build is pending and then the build log should start updating. What is happening is that OpenShift is taking the source code for Pac Man and building an image of that application with the NodeJS runtime. You also see that a MongoDB application was deployed. OpenShift will connect these two applications together using the information you provided, the database name, username, and password. It will take a minute or two for this to complete.
 
-After some time, you might have noticed that Pac Man still isn't running and your deployment named *nodejs-mongo-persistent*
-continues to re-deploy over and over again. Something must be wrong, let's look!
+After some time, you might have noticed that Pac Man still isn't running and your deployment named *nodejs-mongo-persistent* continues to re-deploy over and over again. Something must be wrong, let's look!
 
 image:pacman06.png[]
 
 Click on *View Events* and look at what is happening. So, what is happening?
 
-You should see that readiness and liveness checks are failing. These are checks
-that OpenShift does to make sure your application is working properly. Unfortunately, they must be checking too quickly or checking the wrong path
-and Pac Man is taking longer to start or doesn't have that path. When it doesn't respond fast enough or at all, OpenShift is restarting the deployment.
+You should see that readiness and liveness checks are failing. These are checks that OpenShift does to make sure your application is working properly. Unfortunately, they must be checking too quickly or checking the wrong path and Pac Man is taking longer to start or doesn't have that path. When it doesn't respond fast enough or at all, OpenShift is restarting the deployment.
 
 Fortunately we can change the deployment configuration to get rid of the problem.
 
