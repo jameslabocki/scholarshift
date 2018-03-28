@@ -12,6 +12,7 @@ topics such as:
 * An introduction to Cloud Native Application Development (OpenShift)
 * The importance and basics of source control (GitHub)
 * How to write a Hello World Program (Apache on OpenShift)
+* How to deploy a game (Pac Man) on OpenShift
 
 == Instructor Requirements
 
